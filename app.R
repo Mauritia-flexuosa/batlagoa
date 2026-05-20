@@ -55,14 +55,27 @@ ui <- f7Page(
           f7BlockTitle("Projeto BatLagoa"),
           p("Este app permite visualizar as profundidades da Lagoa da Conceição em tempo real."),
           p("Dados de batimetria obtidos do Geoportal da Prefeitura de Florianópolis."),
-          p("Fonte dos dados: ", a("Geoportal PMF", href = "https://geoportal.pmf.sc.gov.br/downloads/camadas-em-sig-do-mapa", target = "_blank", rel="noopener")),
-          p("Desenvolvido por Marcio Baldissera Cure de forma independente."),
-          p(" "),
-          p("Navegue com responsabilidade. Respeite as regras de navegação e preserve o meio ambiente."),
-          p("Regulamento Internacional para Evitar Abalroamentos no Mar: ", 
-            a("RIPEAM", href = "https://www.marinha.mil.br/salvamarbrasil/sites/www.marinha.mil.br.salvamarbrasil/files/ripeam_colreg_consolidada_com_emd_dez2013.pdf", target = "_self", rel="noopener")
+          p("Fonte dos dados: ",
+             a("Geoportal PMF", href = "https://geoportal.pmf.sc.gov.br/downloads/camadas-em-sig-do-mapa", target = "_blank",class = "external")
           ),
+          # tags$a(
+          #   "Geoportal PMF",
+          #   href = "https://geoportal.pmf.sc.gov.br/downloads/camadas-em-sig-do-mapa",
+          #   target = "_blank",
+          #   style = "pointer-events:auto;",
+          #   
+          # ),
+          p("Desenvolvido por Marcio Baldissera Cure de forma independente."),
+          p("Navegue com responsabilidade. Respeite as regras de navegação e preserve o meio ambiente.",
+          a(
+            "Regulamento Internacional para Evitar Abalroamentos no Mar (RIPEAM)",
+            href = "https://assets.marinha.mil.br/salvamarbrasil/sites/www.marinha.mil.br.salvamarbrasil/files/ripeam_colreg_consolidada_com_emd_dez2013.pdf",
+            target = "_blank",
+            style = "pointer-events:auto;",
+            class = "external"
+          )),
           br(),
+          p(),
           f7Button(
             label = "Dúvidas, sugestões ou comentários?", 
             color = "blue",
